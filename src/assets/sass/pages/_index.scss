@@ -1,0 +1,205 @@
+//Section Intro
+.section-intro{
+  margin-top: 92px;
+}
+.logo-intro{
+  right: 60%;
+  position: relative;
+}
+.title-intro {
+  position: relative;
+  right: 10%;
+}
+.button{
+  font-family: 'quicksandbold', sans-serif; 
+  font-weight: bold; 
+  font-size: 22px;
+  letter-spacing: 0.1em;
+  color: #d19d9a;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 2px solid #d19d9a;
+  display: inline-block;
+  margin-top: 30px;
+  margin-left: 30px;
+  transition: all .3s ease;
+  background: transparent;
+  position: relative;
+  padding: 10px 30px;
+}
+.button::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(239, 226, 219, .7);
+  z-index: -1;
+  left: 6px;
+  top: 6px;
+  transition: all .3s ease;
+}
+.button:hover{
+  color: #d19d9a;
+}
+.button:hover::after {
+  left: 0px;
+  top: 0px;
+}
+.position-ver-mais{
+  position: absolute;
+  top: 54%;
+  right: -55px;
+}
+.ver_mais{
+  font-family: 'quicksandbold', sans-serif; 
+  font-weight: bold; 
+  font-size: 22px;
+  letter-spacing: 0.1em;
+  color: $rosa;
+  text-transform: uppercase;
+  writing-mode:tb-rl;
+  -webkit-transform:rotate(180deg);
+  -moz-transform:rotate(180deg);
+  -o-transform: rotate(180deg);
+  transition: all .3s ease;
+  display: inline-block;
+  // margin-bottom: 0px;
+}
+.ver_mais:hover{
+  color: $rosa;
+  margin-top: 10px;
+}
+
+//Section Bolsas
+.destaque-bolsa{    
+  position: relative;
+  left: 120px;
+  z-index: 2;
+}
+.link-bolsa{
+  font-family: 'quicksandregular', sans-serif; 
+  font-weight: normal; 
+  font-style: normal;
+  font-size: 25px;
+  color:#9c9aa0;
+  text-decoration: underline #9c9aa0;
+  transition: all .3s ease;
+  opacity: 0;
+  visibility: hidden;
+  // display: none;
+}
+.hover-produto:hover .link-bolsa{
+  opacity: 1;
+  visibility: visible;
+  // display: block;
+  // margin-top: -37px;
+}
+.title-produto{
+  font-family: 'quicksandbold', sans-serif; 
+  font-weight: bold; 
+  font-style: normal;
+  font-size: 150px;
+  color: rgba(156, 154, 160, .6);
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1; 
+  letter-spacing: -0.01em;
+}
+.bolsa{
+  left: 16%;
+  top: 0%;
+}
+.btn-bolsas{
+  top: -30px;
+  left: 16%;
+  position: relative;
+}
+.ver-mais-bolsas{
+  top: 55%;
+  left: 5%;
+  position: absolute;
+
+}
+
+//Section Clutch
+ .destaque-clutch{    
+  position: relative;
+  right: 38%;
+  top: 9%;
+  }
+.position-link-clutch{
+  position: relative;
+  top: 12px;
+  right: calc(50% - 70px);
+}
+.clutch{
+  right: 65%;
+  top: 14%;
+}
+.ver-mais-clutch{
+  top: 64%;
+  left: 80%;
+  color: #bdbdbd;
+  position: absolute;
+}
+a.ver-mais-clutch:hover{
+  color: $salmon;
+}
+.btn-clutch {
+  top: 73%;
+  left: 0%;
+  position: absolute;
+}
+
+//Section Instagram
+.box-insta-top{
+  border: 0px;
+  background: transparent;
+}
+.position-link-insta{
+  position: relative;
+  top: 18px
+}
+.link-insta{
+  font-family: 'quicksandregular', sans-serif; 
+  font-weight: normal; 
+  font-style: normal;
+  font-size: 32px;
+  text-transform: uppercase;
+  color: #9c9aa0;
+  text-decoration: underline #9c9aa0;
+  transition: all .3s ease;
+}
+.link-insta:hover{
+  text-decoration: underline $salmon;
+  color: $salmon;
+}
+.box-insta-sides{
+  border: 5px solid #bfbfbf;
+  width: 100%;
+  height: 100%;
+  padding: 0px 20px;
+}
+.bloco-insta{
+  background: #fff;
+  padding: 5px;
+  margin-top: -60px;
+  display: inline-block;
+  max-height: 22%;
+  cursor: pointer;
+}
+.bloco-insta a{
+  color: #9c9aa0;
+  font-size: 64px;
+  margin: 0 auto;
+} 
+.bloco-insta a:hover{
+  color: #9c9aa0;
+}
+.bloco-link{
+  background: #fff;
+  margin-bottom: -48px;
+  display: inline-block;
+  padding: 0px 10px;
+}
