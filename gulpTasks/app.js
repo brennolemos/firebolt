@@ -5,6 +5,8 @@ const uglify = require('gulp-uglify');
 const uglifycss = require('gulp-uglifycss');
 const concat = require('gulp-concat');
 const htmlmin = require('gulp-htmlmin');
+const watch = require('gulp-watch');
+
 
 gulp.task('app', ['app.html', 'app.css', 'app.js', 'app.imgs', 'app.fonts']);
 
@@ -38,4 +40,11 @@ gulp.task('app.imgs', () => {
 gulp.task('app.fonts', () => {
     return gulp.src('src/assets/fonts/*.*')
         .pipe(gulp.dest('assets/webfonts'))
+});
+
+gulp.task('monitorarMudancas', () => {
+    watch('src/**/*.html', () => gulp.start('app.html'));
+    watch('src/**/*.scss', () => gulp.start('app.css'));
+    watch('src/**/*.js', () => gulp.start('app.js'));
+    watch('src/assets/imgs/**/*.*', () => gulp.start('app.imgs'));
 });
