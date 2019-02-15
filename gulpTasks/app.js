@@ -1,8 +1,6 @@
 const gulp = require('gulp');
 const babel = require('gulp-babel');
 const sass = require('gulp-sass');
-const uglify = require('gulp-uglify');
-const uglifycss = require('gulp-uglifycss');
 const concat = require('gulp-concat');
 const htmlmin = require('gulp-htmlmin');
 const watch = require('gulp-watch');
@@ -18,16 +16,18 @@ gulp.task('app.html', () => {
 
 gulp.task('app.css', () => {
     return gulp.src('src/assets/sass/style.scss')
-        .pipe(sass().on('error', sass.logError))
-        .pipe(uglifycss({ 'uglifyComments': true }))
+        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(concat('app.min.css'))
         .pipe(gulp.dest('assets/css'))
 });
 
 gulp.task('app.js', () => {
     return gulp.src('src/assets/js/**/*.js')
-        .pipe(babel({ presets: ['env'] }))
-        .pipe(uglify())
+        .pipe(babel({ 
+            presets: ['env'],
+            minified: true,
+            comments: false 
+        }))
         .pipe(concat('app.min.js'))
         .pipe(gulp.dest('assets/js'))
 });
